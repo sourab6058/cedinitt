@@ -1,0 +1,29 @@
+.updates {
+  max-height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.updates > h3 {
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--midblue);
+  width: 100%;
+  padding: 5px;
+}
+.updates div {
+  padding: 10px;
+  border-top: 1px solid gray;
+  color: #353535;
+  font-weight: lighter;
+  cursor: pointer;
+  font-size: small;
+}
+.updates div > span {
+  width: 100%;
+  align-self: right;
+  text-transform: uppercase;
+  color: var(--midblue);
+  font-weight: bold;
+}

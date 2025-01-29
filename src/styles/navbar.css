@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+}
+.links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.links a {
+  text-decoration: none;
+  color: var(--darkblue);
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 2px solid var(--white);
+  transition: all 300ms;
+}
+.links a:hover {
+  border-color: var(--darkblue);
+}
