@@ -1,48 +1,35 @@
 import * as React from "react";
 import { FaAngleDown } from "react-icons/fa";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import DropdownMenu from "./DropdownMenu";
+import "../styles/navbar.css";
 
 export default function NavMenu({ name, links }) {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  const [isDropdownVisible, setDropdownVisible] = React.useState(false);
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
   };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-  const handleLink = (link) => {
-    handleClose();
-    window.open(link, "_blank");
+
+  const handleMouseLeave = () => {
+    setDropdownVisible(false);
   };
 
   return (
     <div>
       <div
-        id="basic-button"
-        aria-controls={open ? "basic-menu" : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
-        className="text-white font-semibold uppercase cursor-pointer flex items-center justify-center"
+        className="menu flex items-center justify-center cursor-pointer"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         {name}
         <FaAngleDown />
       </div>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          "aria-labelledby": "basic-button",
-        }}
-      >
-        {links.map(({ text, link }) => (
-          <MenuItem onClick={() => handleLink(link)}>{text}</MenuItem>
-        ))}
-      </Menu>
+      {isDropdownVisible && (
+        <DropdownMenu
+          links={links}
+          handleMouseLeave={handleMouseLeave}
+          handleMouseEnter={handleMouseEnter}
+        />
+      )}
     </div>
   );
 }

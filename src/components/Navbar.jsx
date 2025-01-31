@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/logo.png";
 import "../styles/navbar.css";
 import NavMenu from "./NavMenu";
+import MegaDropDownMenu from "./MegaDropDownMenu";
 
 export default function Navbar() {
   return (
@@ -9,34 +10,59 @@ export default function Navbar() {
       <div className="w-full p-2">
         <img src={logo} alt="NITT Logo and CEDI Logo" className="h-[50px]" />
       </div>
-      <div className="flex font-semibold gap-5 mt-5 items-center justify-center uppercase text-white bg-blue-400 p-2 w-full">
+      <div className="flex flex-row font-semibold mt-5 items-center justify-around uppercase text-white bg-blue-400 p-2 w-full">
         <a href="#">Home</a>
         <NavMenu
           name={"Administration"}
           links={[
-            { text: "CEDI Governing Board", link: "#" },
-            { text: "Expert Committee", link: "#" },
-            { text: "Team", link: "#" },
+            {
+              text: "CEDI Governing Board",
+              link: "https://cedinitt.com/GoverningBoard",
+            },
+            {
+              text: "Expert Committee",
+              link: "https://cedinitt.com/AdvisoryBoard",
+            },
+            { text: "Team", link: "https://cedinitt.com/AdminTeam" },
           ]}
+          className="text-xl"
         />
         <NavMenu
           name={"Policies & Guidlines"}
           links={[
-            { text: "CEDI Incubation Policy and Procedure 2020", link: "#" },
+            {
+              text: "CEDI Incubation Policy and Procedure 2020",
+              link: "https://cedinitt.com/CEDI%20Incubation%20Policy%20and%20Procedure%202020.pdf",
+            },
             {
               text: "CEDI NITT Startup Policy for Faculty, Staff & Students",
-              link: "#",
+              link: "https://cedinitt.com/CEDI%20NITT%20Startup%20Policy%20for%20Faculty%20%20Staff%20%20Students%20%20%20JUL%202021.pdf",
             },
-            { text: "NISP 2019 Policy", link: "#" },
-            { text: "Tamil Nadu Startup Policy", link: "#" },
+            {
+              text: "NISP 2019 Policy",
+              link: "https://cedinitt.com/NISP%202019%20Policy.pdf",
+            },
+            {
+              text: "Tamil Nadu Startup Policy",
+              link: "https://cedinitt.com/STARTUP-TN-Policy.pdf",
+            },
           ]}
         />
         <NavMenu
           name={"Facilities"}
           links={[
-            { text: "Incubation Services", link: "#" },
-            { text: "Facilities Labs and Infrastructure", link: "#" },
-            { text: "Contribution to Ecosystem", link: "#" },
+            {
+              text: "Incubation Services",
+              link: "https://cedinitt.com/IncubationServices",
+            },
+            {
+              text: "Facilities Labs and Infrastructure",
+              link: "https://cedinitt.com/Labs",
+            },
+            {
+              text: "Contribution to Ecosystem",
+              link: "https://cedinitt.com/ContributionEcosystem",
+            },
           ]}
         />
         <NavMenu
@@ -53,6 +79,30 @@ export default function Navbar() {
           links={[
             { text: "Past Events", link: "#" },
             { text: "Workshops", link: "#" },
+          ]}
+        />
+        <MegaDropDownMenu
+          name={"Sponsors/Partners"}
+          links={[
+            { text: "ACET", link: "https://cedinitt.com" },
+            { text: "CCW", link: "https://cedinitt.com" },
+            { text: "CIT", link: "https://cedinitt.com" },
+            { text: "KCET", link: "https://cedinitt.com" },
+            { text: "KRIC-NEC", link: "https://cedinitt.com" },
+            { text: "ICE", link: "https://cedinitt.com" },
+            { text: "BSCW", link: "https://cedinitt.com" },
+            { text: "NMC", link: "https://cedinitt.com" },
+            { text: "MeiTy TIDE", link: "https://cedinitt.com" },
+            { text: "TIIC", link: "https://cedinitt.com" },
+            { text: "EDII Tamil Nadu", link: "https://cedinitt.com" },
+            { text: "EDII Ahmedabad", link: "https://cedinitt.com" },
+            { text: "SONATA", link: "https://cedinitt.com" },
+            { text: "ASIA Foundation", link: "https://cedinitt.com" },
+            { text: "TWI", link: "https://cedinitt.com" },
+            {
+              text: "SIEMENS INNOVATION GRANT PVT LTD",
+              link: "https://cedinitt.com",
+            },
           ]}
         />
         <a href="#">Application</a>
