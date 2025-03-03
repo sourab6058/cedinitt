@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const DropdownMenu = ({ links, handleMouseLeave, handleMouseEnter }) => {
   return (
@@ -10,9 +11,9 @@ const DropdownMenu = ({ links, handleMouseLeave, handleMouseEnter }) => {
       <ul>
         {links.map(({ text, link }) => (
           <li className="text-black">
-            <a href={link} target="_blank" className="text-xs">
+            <Link to={link} className="text-xs">
               {text}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

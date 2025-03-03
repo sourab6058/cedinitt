@@ -17,13 +17,13 @@ export default function Navbar() {
           links={[
             {
               text: "CEDI Governing Board",
-              link: "https://cedinitt.com/GoverningBoard",
+              link: "AdministrationPage/GoverningBoard",
             },
             {
               text: "Expert Committee",
-              link: "https://cedinitt.com/AdvisoryBoard",
+              link: "AdministrationPage/AdvisoryBoard",
             },
-            { text: "Team", link: "https://cedinitt.com/AdminTeam" },
+            { text: "Team", link: "AdministrationPage/AdminTeam" },
           ]}
           className="text-xl"
         />
