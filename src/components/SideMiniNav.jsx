@@ -27,7 +27,7 @@ export default function SideMiniNav({ rows }) {
                   <TableCell
                     component="th"
                     scope="row"
-                    className="border-l-4 border-blue-600"
+                    className="border-l-4 border-blue-600 w-50"
                   >
                     <span>{row.name}</span>
                   </TableCell>
@@ -39,7 +39,7 @@ export default function SideMiniNav({ rows }) {
                   <TableCell
                     component="th"
                     scope="row"
-                    className="border-white border-l-4"
+                    className="border-white border-l-4 w-50"
                   >
                     <span>{row.name}</span>
                   </TableCell>

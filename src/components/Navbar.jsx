@@ -53,11 +53,11 @@ export default function Navbar() {
           links={[
             {
               text: "Incubation Services",
-              link: "https://cedinitt.com/IncubationServices",
+              link: "IncubationServices",
             },
             {
               text: "Facilities Labs and Infrastructure",
-              link: "https://cedinitt.com/Labs",
+              link: "Labs",
             },
             {
               text: "Contribution to Ecosystem",
